@@ -30,4 +30,12 @@ public class Item {
             quality = quality - 1;
         }
     }
+
+    public void updateQuality() {
+        decreaseQualityByOne();
+        sellIn = sellIn - 1;
+        if (sellIn < 0) {
+            decreaseQualityByOne();
+        }
+    }
 }
